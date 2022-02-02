@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+.trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* .trigger:hover {
+  color: #1890ff;
+} */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.site-layout .site-layout-background {
+  background: #c5c5c5 !important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar {
+  background-color: #ffffff;
+  box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.05);
+  width: 270px;
+  height: fit-content;
+}
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem;
+}
+.menu-item-icon {
+  font-size: 1.3rem;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  color: #ffffff !important;
+  background-color: #0078d4;
+}
+.ant-menu-item:hover {
+  color: rgb(116, 116, 116) !important;
+}
+.ant-menu-inline .ant-menu-item::after {
+  border-right: none;
+}
+.addIcon {
+  padding: 8px;
+  width: 30px;
+  height: 30px;
+  top: 20px;
   color: white;
+  background: #0078d4;
+  border-radius: 15px;
+  cursor: pointer;
 }
+.search {
+  width: 300px;
+  height: 30px;
+  color: #959595;
+  background: #ffffff;
+  border: 1px solid #d5d5d5;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+.notification {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 7px;
+  width: 30px;
+  height: 30px;
 
-.App-link {
-  color: #61dafb;
+  cursor: pointer;
+  background: #ffffff;
+  border-radius: 10px;
 }
+.site-form-item-icon {
+  color: #0078d4;
+}
+.rotate {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  position: static;
+  width: 35px;
+  height: 35px;
+  left: 0px;
+  top: 0px;
+
+  background: #ffffff;
+  border: 1px solid #d5d5d5;
+  box-sizing: border-box;
+  border-radius: 15px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0;
 }
+ .printField{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+
+  position: static;
+  width: 35px;
+  height: 35px;
+  left: 0px;
+  top: 0px;
+  
+  background: #FFFFFF;
+  border: 1px solid #D5D5D5;
+  box-sizing: border-box;
+  border-radius: 15px;
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+ }
+ .filterField{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 21px;
+  
+  position: static;
+  width: 90px;
+  height: 35px;
+  top: 0px;
+  
+  background: #FFFFFF;
+  border: 1px solid #D5D5D5;
+  box-sizing: border-box;
+  border-radius: 15px;
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  margin: 0 5px;
+ }
+ .ant-layout-header {
+   line-height: 0;
+ }
+ .headerContent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+ }
+ .ant-table-thead{
+   background-color: #c5c5c5 !important;
+ }
