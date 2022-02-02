@@ -2,8 +2,6 @@ import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
   UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
   HomeOutlined,
   AccountBookOutlined,
   FileDoneOutlined,
@@ -16,13 +14,7 @@ import {
 import { Dropdown, Layout, Menu } from "antd";
 
 import { useState } from "react";
-import { CLaims } from "../assets/Icons/Claims";
-import { Encounters } from "../assets/Icons/EncountersIcon";
-import { Home } from "../assets/Icons/Home";
 import { Organizations } from "../assets/Icons/Organizations";
-import { Patients } from "../assets/Icons/Patients";
-import { PreAuthorization } from "../assets/Icons/Pre-Authorization";
-import { Users } from "../assets/Icons/Users";
 
 import { Logo } from "../assets/logo";
 import PatientList from "../pages/PatientList";
