@@ -1,36 +1,49 @@
+import { ArrowRightOutlined } from "@ant-design/icons";
 import { Col, Image, Row, Table, Tag } from "antd";
 import React from "react";
 const columns = [
   {
-    title: 'Name',
-    dataIndex: 'name',
-    key: 'name',
-    render: text => <p>{text}</p>,
+    title: "Name",
+    dataIndex: "name",
+    key: "name",
+    render: (text) => (
+      <p style={{ marginTop: "10px", display: "flex", alignItems: "center" }}>
+        <Image
+          width="2rem"
+          style={{ borderRadius: "8px" }}
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNQb4jJzXX5S9IgIQW_hUtTfl4e_CFiu9toQ&usqp=CAU"
+        />
+        <span>
+          {text}
+          <br />
+          id
+        </span>
+      </p>
+    ),
   },
   {
-    title: 'Age',
-    dataIndex: 'age',
-    key: 'age',
+    title: "Age",
+    dataIndex: "age",
+    key: "age",
   },
   {
-    title: 'Gender',
-    dataIndex: 'gender',
-    key: 'gender',
+    title: "Gender",
+    dataIndex: "gender",
+    key: "gender",
   },
   {
-    title: 'Option',
-    key: 'option',
-    dataIndex: 'option',
-    render: tags => (
+    title: "Option",
+    key: "option",
+    dataIndex: "option",
+    render: (tags) => (
       <>
-        {tags.map(tag => {
-          let color = tag.length > 5 ? 'geekblue' : 'green';
-          if (tag === 'loser') {
-            color = 'volcano';
-          }
+        {tags.map((tag) => {
           return (
-            <Tag color={color} key={tag}>
+            <Tag className="options" key={tag}>
               {tag.toUpperCase()}
+              <span className="arrow">
+                <ArrowRightOutlined style={{ fontSize: "10px" }} />
+              </span>
             </Tag>
           );
         })}
@@ -51,33 +64,33 @@ const columns = [
 
 const data = [
   {
-    key: '1',
-    name: `${<Image width='10rem' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkiIFjCOZ-mMeqxd2ryrneiHedE8G9S0AboA&usqp=CAU'/>}John Brown`,
+    key: "1",
+    name: `John Brown`,
     age: 32,
-    gender: 'New York No. 1 Lake Park',
-    option: ['nice', 'developer'],
+    gender: "Male",
+    option: ["More"],
   },
   {
-    key: '2',
-    name: 'Jim Green',
+    key: "2",
+    name: "Jim Green",
     age: 42,
-    gender: 'London No. 1 Lake Park',
-    option: ['loser'],
+    gender: "Male",
+    option: ["More"],
   },
   {
-    key: '3',
-    name: 'Joe Black',
+    key: "3",
+    name: "Joe Black",
     age: 32,
-    gender: 'Sidney No. 1 Lake Park',
-    option: ['cool', 'teacher'],
+    gender: "Male",
+    option: ["More"],
   },
 ];
 
 const PatientList = () => {
   return (
     <Row>
-      <Col span={24} style={{padding:'1rem',marginTop:'1.5rem'}}>
-      <Table columns={columns} dataSource={data} />
+      <Col span={24} style={{ padding: "1rem", marginTop: "1.5rem" }}>
+        <Table columns={columns} dataSource={data} />
       </Col>
     </Row>
   );

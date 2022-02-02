@@ -9,12 +9,12 @@ import {
   TeamOutlined,
   DownOutlined,
   LoginOutlined,
+  BellOutlined,
 } from "@ant-design/icons";
 
 import { Dropdown, Layout, Menu } from "antd";
 
 import { useState } from "react";
-import { Organizations } from "../assets/Icons/Organizations";
 
 import { Logo } from "../assets/logo";
 import PatientList from "../pages/PatientList";
@@ -89,7 +89,7 @@ const Sidebar = () => {
           >
             Claims
           </Menu.Item>
-          <Menu.Item key="Organizations" icon={<Organizations />}>
+          <Menu.Item key="Organizations" icon={<BellOutlined style={{ fontSize: "1.3rem" }} />}>
             Organizations
           </Menu.Item>
 
@@ -102,7 +102,6 @@ const Sidebar = () => {
           <hr
             style={{
               border: "1px solid #E6E9EF",
-              marginTop: "60px",
               bottom: "0px",
             }}
           />
@@ -157,7 +156,7 @@ const Sidebar = () => {
       <Layout className="site-layout">
         <Header
           className="site-layout-background"
-          style={{ padding: '10px' }}
+          style={{ padding: '14px' }}
         ><SearchField/><hr
         style={{
           border: "1px solid #E5E5E5",

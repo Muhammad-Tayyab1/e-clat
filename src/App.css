@@ -1,7 +1,7 @@
 .trigger {
-  padding: 0 24px;
+  padding: 0 15px;
   font-size: 18px;
-  line-height: 64px;
+  line-height: 50px;
   cursor: pointer;
   transition: color 0.3s;
 }
@@ -22,8 +22,10 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
+  padding: 0.5rem 0.7rem;
+}
+.logo {
+  height: 30px;
 }
 .menu-item-icon {
   font-size: 1.3rem;
@@ -49,7 +51,7 @@
   cursor: pointer;
 }
 .search {
-  width: 300px;
+  width: 100%;
   height: 30px;
   color: #959595;
   background: #ffffff;
@@ -68,6 +70,7 @@
   cursor: pointer;
   background: #ffffff;
   border-radius: 10px;
+  cursor: pointer;
 }
 .site-form-item-icon {
   color: #0078d4;
@@ -83,6 +86,7 @@
   height: 35px;
   left: 0px;
   top: 0px;
+  cursor: pointer;
 
   background: #ffffff;
   border: 1px solid #d5d5d5;
@@ -96,7 +100,7 @@
   flex-grow: 0;
   margin: 0;
 }
- .printField{
+.printField {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -107,51 +111,102 @@
   height: 35px;
   left: 0px;
   top: 0px;
-  
-  background: #FFFFFF;
-  border: 1px solid #D5D5D5;
+  cursor: pointer;
+
+  background: #ffffff;
+  border: 1px solid #d5d5d5;
   box-sizing: border-box;
   border-radius: 15px;
-  
+
   /* Inside auto layout */
-  
+
   flex: none;
   order: 1;
   flex-grow: 0;
- }
- .filterField{
+}
+.filterField {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 8px 21px;
-  
+
   position: static;
   width: 90px;
   height: 35px;
   top: 0px;
-  
-  background: #FFFFFF;
-  border: 1px solid #D5D5D5;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d5d5d5;
   box-sizing: border-box;
   border-radius: 15px;
-  
+
   /* Inside auto layout */
-  
+
   flex: none;
   order: 2;
   flex-grow: 0;
   margin: 0 5px;
- }
- .ant-layout-header {
-   line-height: 0;
- }
- .headerContent{
+}
+.ant-layout-header {
+  line-height: 0;
+}
+.headerContent {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0.5rem;
- }
- .ant-table-thead{
-   background-color: #c5c5c5 !important;
- }
+}
+.ant-table-thead {
+  background-color: #c5c5c5 !important;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 20px;
+  background: #f5f5f5;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.ant-table-tbody > tr > td {
+  padding: 0px 16px;
+}
+.arrow {
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background: #0078d4;
+  margin-left: 5px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ant-table table {
+  width: 100%;
+}
+.deceased {
+  position: static;
+  width: 60px;
+  height: 12px;
+  left: 10px;
+  top: 6px;
+
+  font-family: Epilogue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+
+  color: #fd4c4c;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 10px;
+}
