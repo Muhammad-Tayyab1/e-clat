@@ -19,13 +19,8 @@ import { Link } from "react-router-dom";
 import { AsideRoutes } from "../../Routes/AsideRoutes";
 
 import { Logo } from "../assets/logo";
-import Encounters from "../pages/Encounters";
-import PatientList from "../pages/PatientList";
-import PreAuthorization from "../pages/PreAuthorization";
-import Headers from "./Headers";
-import SearchField from "./SearchField";
 
-const { Header, Sider, Content } = Layout;
+const { Sider, Content } = Layout;
 
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
