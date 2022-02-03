@@ -55,9 +55,9 @@ const Organizations = () => {
       <Col>
         <div>Browse Organizations by State</div>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {states.map((d) => (
+          {/* {states.map((d) => (
             <span>{d}</span>
-          ))}{" "}
+          ))}{" "} */}
         </div>
       </Col>
     </Row>
