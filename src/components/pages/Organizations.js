@@ -27,8 +27,10 @@ const Organizations = () => {
         <BellOutlined style={{ fontSize: "2rem", color: "#0078D4" }} />
         <span className="title">Organizations</span>
         <p style={{ margin: "0 0.3rem" }}>
-          Enter a location or <a href="#">browse all locations</a> to continue.
-          Find Hospitals, Labs or departments by selecting a tab below.
+          Enter a location or{" "}
+          <a href="https://www.google.com/maps">browse all locations</a> to
+          continue. Find Hospitals, Labs or departments by selecting a tab
+          below.
         </p>
         <div></div>
       </Col>
@@ -53,9 +55,9 @@ const Organizations = () => {
       <Col>
         <div>Browse Organizations by State</div>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {states.map((d) => {
-            <span>{d}</span>;
-          })}{" "}
+          {states.map((d) => (
+            <span>{d}</span>
+          ))}{" "}
         </div>
       </Col>
     </Row>
