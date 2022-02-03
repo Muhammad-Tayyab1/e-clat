@@ -5,12 +5,12 @@ import { SearchIcon } from "../assets/Icons/SearchIcon";
 import SearchField from "../common/SearchField";
 const { TabPane } = Tabs;
 const Organizations = () => {
-  const states = [
-    { Abia: "Abia" },
-    { Adamawa: "Adamawa" },
-    "Akwa Ibom",
-    "Anambra",
-  ];
+//   const states = [
+//     { Abia: "Abia" },
+//     { Adamawa: "Adamawa" },
+//     "Akwa Ibom",
+//     "Anambra",
+//   ];
   return (
     <Row>
       <Col span={24} style={{ padding: "0.3rem 0.7rem" }}>
