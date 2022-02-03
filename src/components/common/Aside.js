@@ -15,9 +15,13 @@ import {
 import { Dropdown, Layout, Menu } from "antd";
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { AsideRoutes } from "../../Routes/AsideRoutes";
 
 import { Logo } from "../assets/logo";
+import Encounters from "../pages/Encounters";
 import PatientList from "../pages/PatientList";
+import PreAuthorization from "../pages/PreAuthorization";
 import Headers from "./Headers";
 import SearchField from "./SearchField";
 
@@ -63,41 +67,56 @@ const Sidebar = () => {
             key="Home"
             icon={<HomeOutlined style={{ fontSize: "1.3rem" }} />}
           >
-            Home
+            <Link className="routelink" to="/">
+              Home
+            </Link>
           </Menu.Item>
           <Menu.Item
             key="PatientList"
             icon={<UserOutlined style={{ fontSize: "1.3rem" }} />}
           >
-            Patient List
+            <Link className="routelink" to="/patientList">
+              Patient List
+            </Link>
           </Menu.Item>
           <Menu.Item
             key="Encounters"
             icon={<AccountBookOutlined style={{ fontSize: "1.3rem" }} />}
           >
-            Encounters
+            <Link className="routelink" to="/encounters">
+              {" "}
+              Encounters
+            </Link>
           </Menu.Item>
           <Menu.Item
             key="Pre-Authorization"
             icon={<FileDoneOutlined style={{ fontSize: "1.3rem" }} />}
           >
-            Pre-Authorization
+            <Link to="/pre-authorization"></Link>Pre-Authorization
           </Menu.Item>
           <Menu.Item
             key="Claims"
             icon={<FolderOpenOutlined style={{ fontSize: "1.3rem" }} />}
           >
-            Claims
+            <Link className="routelink" to="/claims"></Link> Claims
           </Menu.Item>
-          <Menu.Item key="Organizations" icon={<BellOutlined style={{ fontSize: "1.3rem" }} />}>
-            Organizations
+          <Menu.Item
+            key="Organizations"
+            icon={<BellOutlined style={{ fontSize: "1.3rem" }} />}
+          >
+            <Link className="routelink" to="/organizations">
+              {" "}
+              Organizations
+            </Link>
           </Menu.Item>
 
           <Menu.Item
             key="Users"
             icon={<TeamOutlined style={{ fontSize: "1.3rem" }} />}
           >
-            Users
+            <Link className="routelink" to="/users">
+              Users
+            </Link>
           </Menu.Item>
           <hr
             style={{
@@ -154,7 +173,7 @@ const Sidebar = () => {
         </Menu>
       </Sider>
       <Layout className="site-layout">
-        <Header
+        {/* <Header
           className="site-layout-background"
           style={{ padding: '14px' }}
         ><SearchField/><hr
@@ -162,9 +181,9 @@ const Sidebar = () => {
           border: "1px solid #E5E5E5",
           bottom: "0px",
         }}
-      /><Headers/> </Header>
+      /><Headers/> </Header>*/}
         <Content className="site-layout-background">
-          <PatientList/>
+          <AsideRoutes />
         </Content>
       </Layout>
     </Layout>

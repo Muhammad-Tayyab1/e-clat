@@ -11,7 +11,8 @@
 } */
 
 .site-layout .site-layout-background {
-  background: #c5c5c5 !important;
+  background: #dfdbdb !important;
+  padding: 1rem;
 }
 .sidebar {
   background-color: #ffffff;
@@ -100,6 +101,9 @@
   flex-grow: 0;
   margin: 0;
 }
+.table {
+  overflow-x: auto;
+}
 .printField {
   display: flex;
   flex-direction: row;
@@ -166,7 +170,7 @@
   justify-content: center;
   align-items: center;
   width: 80px;
-  height: 20px;
+  height: 26px;
   background: #f5f5f5;
   border-radius: 15px;
   cursor: pointer;
@@ -189,24 +193,291 @@
   width: 100%;
 }
 .deceased {
-  position: static;
-  width: 60px;
-  height: 12px;
-  left: 10px;
-  top: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 10px;
+  width: 70px;
+  height: 20px;
+  background: #ffd1d1;
+  border: 1px solid #fd4c4c;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: #fd4c4c;
+  font-size: 11px;
+}
+.ant-table-thead > tr > th {
+  background: #dfdbdb;
+  color: #959595;
+}
+.finished {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 10px;
+  width: 68px;
+  height: 26px;
+  left: 1127px;
+  top: 233px;
 
-  font-family: Epilogue;
+  background: #e6ffee;
+  border: 1px solid #00a25b;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: Rubik;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 14px;
+  color: #00a25b;
+}
+.ongoing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 10px;
+  color: #555555;
+  width: 67px;
+  height: 26px;
+  left: 1127px;
+  top: 379px;
 
+  background: #f5f5f5;
+  border: 1px solid #959595;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+}
+.canceled {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 10px;
+  width: 72px;
+  height: 26px;
+  left: 1127px;
+  top: 525px;
   color: #fd4c4c;
+  background: #ffd1d1;
+  border: 1px solid #fd4c4c;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+}
+.date {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #959595;
+}
+.border {
+  border: 1px solid #d5d5d5;
+  transform: rotate(90deg);
+  width: 40px;
+  height: 0px;
+  /* Inside auto layout */
+
+  flex: none;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+.iconCircle {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 0px;
+  top: 0px;
+
+  background: #7b61ff;
+  border-radius: 15px;
+}
+.name {
+  font-family: Epilogue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 15px;
+  color: #555555;
+}
+.patientId {
+  font-family: Epilogue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+
+  color: #757575;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 8px 14px;
+}
+.provider {
+  font-family: Epilogue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+
+  color: #555555;
+}
+
+.onGoing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 10px;
+  width: 67px;
+  height: 26px;
+  left: 1268px;
+  top: 408px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #0078d4;
+  background: #e6f4ff;
+  border: 1px solid #0078d4;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.claimsHeader {
+  height: 110px;
+  background: #ffffff;
+  border: 1px solid #d5d5d5;
+  box-sizing: border-box;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+.ant-menu-item-selected a,
+.ant-menu-item-selected a:hover {
+  /* color: #1890ff; */
+  color: white;
+}
+.routelink {
+  color: black;
+}
+
+.claimRightBorder {
+  border: 4px solid #00a25b;
+  transform: rotate(90deg);
+  width: 60px;
+  height: 0px;
+  top: 0px;
+}
+.totalIndemity {
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 4px 0px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 38px;
+  color: #353535;
+  position: static;
+}
+.indemityText {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #757575;
 
   /* Inside auto layout */
 
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin: 0px 10px;
+  margin: 0px 4px;
+}
+.newClaimBorder {
+  width: 60px;
+  height: 0px;
+  border: 4px solid #d5d5d5;
+  transform: rotate(90deg);
+}
+
+.resolvedClaim {
+  width: 60px;
+  height: 0px;
+  border: 4px solid #0078d4;
+  transform: rotate(90deg);
+}
+.updateClaims {
+  width: 60px;
+  height: 0px;
+
+  border: 4px solid #fd4c4c;
+  transform: rotate(90deg);
+}
+.title {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 38px;
+}
+.searchLocation {
+  width: 100%;
+  height: 100px;
+  background: #ffffff;
+}
+.searchField {
+  width: 30%;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid #d5d5d5;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.userIcon {
+  width: 30px;
+  height: 30px;
+  background: #e6f4ff;
+  border-radius: 10px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: #0078d4;
+}
+.searchbutton {
+  background: #0078d4;
+  border-radius: 10px;
 }
