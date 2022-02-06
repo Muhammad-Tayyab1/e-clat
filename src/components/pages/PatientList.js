@@ -2,17 +2,29 @@ import { ArrowRightOutlined, UserOutlined } from "@ant-design/icons";
 import { Col, Image, Row, Table, Tag } from "antd";
 import React, { useState } from "react";
 import Headers from "../common/Headers";
+import PatientDetailsModel from "../common/PatientDetailsModel";
 import SearchField from "../common/SearchField";
 
 const PatientList = () => {
   const [deceased] = useState(true);
+  const [model, setModel] = useState(false);
+  const onClick = () => {
+    setModel(true);
+  };
   const columns = [
     {
       title: "DETAILS",
       dataIndex: "details",
       key: "details",
       render: (text) => (
-        <p style={{ marginTop: "10px", display: "flex", alignItems: "center", width:'max-content' }}>
+        <p
+          style={{
+            marginTop: "10px",
+            display: "flex",
+            alignItems: "center",
+            width: "max-content",
+          }}
+        >
           <Image
             width="48px"
             height="48px"
@@ -37,9 +49,7 @@ const PatientList = () => {
       title: "GENDER",
       dataIndex: "gender",
       key: "gender",
-      render: (text)=>(
-        <span className="gender">{text}</span>
-      )
+      render: (text) => <span className="gender">{text}</span>,
     },
     {
       title: "OPTION",
@@ -49,8 +59,8 @@ const PatientList = () => {
         <>
           {tags.map((tag) => {
             return (
-              <Tag className="options" key={tag}>
-               <span className="more">{tag.toUpperCase()}</span> 
+              <Tag className="options" key={tag} onClick={() => onClick()}>
+                <span className="more">{tag.toUpperCase()}</span>
                 <span className="arrow">
                   <ArrowRightOutlined style={{ fontSize: "10px" }} />
                 </span>
@@ -87,7 +97,7 @@ const PatientList = () => {
   ];
 
   return (
-    <Row style={{overflow:'hidden'}}>
+    <Row style={{ overflow: "hidden" }}>
       <Col span={24}>
         <SearchField />
       </Col>
@@ -98,19 +108,13 @@ const PatientList = () => {
           width: "100%",
         }}
       />
-      <Col span={24} >
-        <Headers
-          icon={<UserOutlined />}
-          title={"Patients"}
-        />
+      <Col span={24}>
+        <Headers icon={<UserOutlined />} title={"Patients"} />
       </Col>{" "}
-      <Col
-        span={24}
-        className="table"
-        
-      >
+      <Col span={24} className="table">
         <Table columns={columns} dataSource={data} />
       </Col>
+      {model && <PatientDetailsModel close={()=> setModel(false)}  />}
     </Row>
   );
 };

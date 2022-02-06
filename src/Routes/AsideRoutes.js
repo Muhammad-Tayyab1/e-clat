@@ -7,6 +7,7 @@ import Organizations from "../components/pages/Organizations";
 import PreAuthorization from "../components/pages/PreAuthorization";
 import Users from "../components/pages/Users";
 import PatientList from "../components/pages/PatientList";
+import PatientDetailsModel from "../components/common/PatientDetailsModel";
 
 export const AsideRoutes = () => {
   return (
@@ -20,6 +21,7 @@ export const AsideRoutes = () => {
         <Route path="/claims" element={<Claims />} />
         <Route path="/organizations" element={<Organizations />} />
         <Route path="/users" element={<Users />} />
+        <Route path='/patient-details' element={<PatientDetailsModel />} />
       </Routes>
     </div>
   );

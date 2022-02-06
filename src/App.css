@@ -25,10 +25,13 @@ body {
 .ant-side-Layout {
   position: fixed;
   background-color: #ffffff;
+  height: 100%;
 }
 .sidelayout {
-  position: relative;
+  position: fixed;
   background-color: #ffffff;
+  height: 100%;
+  width: 5rem;
 }
 .active-profile {
   display: none !important;
@@ -624,6 +627,10 @@ body {
   flex-grow: 0;
   margin: 4px 0px;
 }
+.user-div {
+  position: absolute;
+  bottom: 0;
+}
 .ant-table-tbody {
   background-color: #ffffff;
 }
@@ -653,6 +660,373 @@ body {
   font-size: 14px;
   line-height: 14px;
   color: #555555;
+}
+.patient-details-header {
+  display: flex;
+  justify-content: space-between;
+}
+.patient-details {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 25px;
+  /* identical to box height */
+  color: #353535;
+}
+.close-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background: #ffffff;
+  border: 1px solid #d5d5d5;
+  box-sizing: border-box;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.patient-div {
+  display: flex;
+}
+.patient-image {
+  width: 96px;
+  height: 96px;
+  /* background: url(red.jpg); */
+  border-radius: 15px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+.patient-name {
+  position: static;
+  width: 194px;
+  height: 38px;
+  left: 0px;
+  top: 0px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 38px;
+  /* identical to box height */
+  color: #353535;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+.patient-id {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #757575;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+.patient-name-div {
+  display: flex;
+  flex-direction: column;
+}
+.patient-personal-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.gender-div {
+  display: flex;
+  align-items: center;
+}
+.gender-heading {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #959595;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  /* margin: 4px 0px; */
+}
+.gender-text {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #555555;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  /* margin: 4px 0px; */
+}
+.gender-content {
+  display: flex;
+  flex-direction: column;
+}
+.ant-tabs-tab + .ant-tabs-tab {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #959595;
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #555555;
+}
+.medications-tab {
+  width: 510px;
+  height: 72px;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.medicine-box {
+  width: 42px;
+  height: 42px;
+  background: #e6f4ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0rem 1rem;
+}
+.tablet-title {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #353535;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+.last-update {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  color: #757575;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 4px;
+}
+.core-plan-body {
+  width: 510px;
+  height: 150px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.core-plan-title {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 25px;
+  /* identical to box height */
+  color: #353535;
+}
+.dises-name {
+  width: 224px;
+  height: 19px;
+  left: 0px;
+  top: 0px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #353535;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+.encounters-name{
+  width: 224px;
+  height: 19px;
+  left: 0px;
+  top: 0px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #353535;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+.plan-date {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  color: #757575;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.details-field {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  text-transform: uppercase;
+  color: #959595;
+}
+.details-text {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #555555;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 10px;
+}
+.respiratory-thrapy {
+  margin-top: 0.5rem;
+  width: 510px;
+  height: 72px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Encounter-tab-body {
+  margin-top: 0.5rem;
+  width: 510px;
+  height: 72px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.thrapy {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #353535;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.therapy-body {
+  display: flex;
+  flex-direction: column;
+}
+.verticle-line {
+  width: 40px;
+  height: 0px;
+  border: 1px solid #d5d5d5;
+  transform: rotate(90deg);
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 5px;
+}
+.more-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 40px;
+  left: calc(50% - 140px / 2 + 435px);
+  background: #ffffff;
+  border: 1px solid #d5d5d5;
+  box-sizing: border-box;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.more-button:hover {
+  background-color: rgb(223, 221, 221);
+}
+.show-more {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  color: #555555;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 10px;
+}
+.patient-details-model {
+  position: fixed;
+  top: 0;
+  right: 0;
+  /* width: 100%; */
+  height: 100%;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; */
+  background-color: #ffffff;
+  padding: 24px;
+  overflow: auto;
+  overscroll-behavior-y: contain;
+  z-index: 102;
 }
 @media screen and (max-width: 480px) {
   .iconStyle {
@@ -698,5 +1072,28 @@ body {
   }
   .claimsHeader {
     height: 75px;
+  }
+  .core-plan-body {
+    width: 100%;
+  }
+  .respiratory-thrapy {
+    width: 100%;
+  }
+  .dises-name {
+    width: max-content;
+    margin-right: 0.5rem;
+  }
+  .medications-tab {
+    width: 100%;
+  }
+  .Encounter-tab-body {
+    width: 100%;
+  }
+  .encounters-name{
+    width: 100%;
+    margin: 13px 0px;
+  }
+  .collapsed{
+    
   }
 }

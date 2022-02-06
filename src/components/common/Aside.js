@@ -31,8 +31,10 @@ const Sidebar = () => {
   //     };
 
   const toggle = () => {
+    if (window.innerWidth >= "480px") {
+      setCollapsed(false);
+    }
     setCollapsed(!collapsed);
-
   };
   const menu = (
     <Menu>
@@ -50,16 +52,23 @@ const Sidebar = () => {
         trigger={null}
         collapsible
         collapsed={collapsed}
+        onCollapse={()=>toggle()}
       >
-        <div className={` ${collapsed === true ? 'sidelayout' : 'ant-side-Layout'}`}>
+        <div
+          className={` ${
+            collapsed === true ? "sidelayout" : "ant-side-Layout"
+          }`}
+        >
           <div className="header">
-            <div className="logo">{collapsed === true ? "" : <Logo />}</div>
+            <Link to="/">
+              <div className="logo">{collapsed === true ? "" : <Logo />}</div>
+            </Link>
             <div className="trigger" onClick={() => toggle()}>
               {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
             </div>
           </div>
 
-          <Menu mode="inline" defaultSelectedKeys={["Home"]} >
+          <Menu mode="inline" defaultSelectedKeys={["Home"]}>
             <Menu.Item
               key="Home"
               className="menu-item-content"
@@ -122,7 +131,7 @@ const Sidebar = () => {
                 Users
               </Link>
             </Menu.Item>
-            <div>
+            <div className="user-div">
               <hr
                 style={{
                   border: "1px solid #E6E9EF",
@@ -131,23 +140,28 @@ const Sidebar = () => {
               />
               <div className="profile-div">
                 <UserOutlined
-                  className={` ${collapsed === true ? 'active-profile' : 'userProfile'}`}
-
+                  className={` ${
+                    collapsed === true ? "active-profile" : "userProfile"
+                  }`}
                 />
                 &nbsp;
-                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
                   <div style={{ lineHeight: "1.5715" }}>
-                    <div className="user-name">
-                      Leroy Sane
-                    </div>
+                    <div className="user-name">Leroy Sane</div>
                     <div className="user-title">Doctor</div>
                   </div>
-                  &nbsp;
-                  &nbsp;
+                  &nbsp; &nbsp;
                   <Dropdown overlay={menu} trigger={["click"]}>
                     <span
                       className="ant-dropdown-link"
-                      style={{ marginTop: "-5px", display: 'flex', alignItems: 'center', color: '#959595' }}
+                      style={{
+                        marginTop: "-5px",
+                        display: "flex",
+                        alignItems: "center",
+                        color: "#959595",
+                      }}
                       onClick={(e) => e.preventDefault()}
                     >
                       <DownOutlined
