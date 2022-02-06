@@ -10,6 +10,11 @@ const Claims = () => {
       title: "DATE",
       dataIndex: "date",
       key: "date",
+      render :(date)=>(
+        <>
+        <span style={{display: "flex", alignItems: "center",width:'max-content'}}>{date}</span>
+        </>
+      )
     },
     {
       title: "Description",
@@ -17,7 +22,7 @@ const Claims = () => {
       key: "description",
       render: (description) => (
         <>
-          <span> {description}</span>
+          <span className="description"> {description}</span>
           <br />
           <span className="patientId" style={{margin:'0'}}>Routine checkup</span>
         </>
@@ -28,7 +33,7 @@ const Claims = () => {
       dataIndex: "claimant",
       key: "claimant",
       render: (text) => (
-        <p style={{ marginTop: "10px", display: "flex", alignItems: "center" }}>
+        <p style={{ marginTop: "10px", display: "flex", alignItems: "center", width:'max-content' }}>
           <Image
             width="48px"
             height="48px"
@@ -81,7 +86,7 @@ const Claims = () => {
           {tags.map((tag) => {
             return (
               <Tag className="options" key={tag}>
-                {tag.toUpperCase()}
+                <span className="more">{tag.toUpperCase()}</span> 
                 <span className="arrow">
                   <ArrowRightOutlined style={{ fontSize: "10px" }} />
                 </span>
@@ -168,7 +173,7 @@ const Claims = () => {
       </Col>
       <Col span={24} style={{ padding: "0.3rem 0.7rem", marginTop: "1rem" }}>
         <Headers
-          icon={<FolderOpenOutlined style={{ fontSize: "2rem" }} />}
+          icon={<FolderOpenOutlined/>}
           title={"Claims"}
         />
       </Col>

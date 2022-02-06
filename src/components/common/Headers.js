@@ -8,12 +8,11 @@ const Headers = ({ icon, title, route }) => {
   return (
     <Row>
       <Col span={24} className="headerContent">
-        <div style={{ display: "flex"}}>
-          {/* <Patients/> */}
-          <span style={{color:'#0078D4'}}>{icon}</span> &nbsp;
-          <h1 className="title">{title}</h1>
+        <div style={{ display: "flex", alignItems:'center'}}>
+          <span className="iconStyle">{icon}</span> &nbsp;
+          <div className="title">{title}</div>
         </div>
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div className="rotate">
             <RepeateIcon />
           </div>

@@ -11,10 +11,10 @@ const Users = () => {
       dataIndex: "description",
       key: "description",
       render: (description) => (
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div style={{ display: "flex", alignItems: "center",  width:'max-content' }}>
           <span className="userIcon">E</span>
-          <span>
-            <span> {description}</span>
+          <span style={{margin: '0px 9px'}}>
+            <span style={{fontWeight:'bold'}}> {description}</span>
             <br />
             <span className="patientId" style={{ margin: "0" }}>
               Admin
@@ -28,14 +28,8 @@ const Users = () => {
       dataIndex: "Phone",
       key: "Phone",
       render: (text) => (
-        <p style={{ marginTop: "10px", display: "flex", alignItems: "center" }}>
-          {/* <Image
-                  width="48px"
-                  height="48px"
-                  style={{ borderRadius: "15px" }}
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNQb4jJzXX5S9IgIQW_hUtTfl4e_CFiu9toQ&usqp=CAU"
-                /> */}
-          <span className="name"> {text}</span>
+        <p style={{ marginTop: "10px", display: "flex", alignItems: "center", width:'max-content' }}>
+          <span className="phone"> {text}</span>
         </p>
       ),
     },
@@ -43,7 +37,7 @@ const Users = () => {
       title: "EMAIL",
       dataIndex: "email",
       key: "email",
-      render: (tags) => <p className="provider">{tags}</p>,
+      render: (tags) => <span className="email">{tags}</span>,
     },
     {
       title: "ACTION",
@@ -54,7 +48,7 @@ const Users = () => {
           {tags.map((tag) => {
             return (
               <Tag className="options" key={tag}>
-                {tag.toUpperCase()}
+               <span className="more">{tag.toUpperCase()}</span> 
                 <span className="arrow">
                   <ArrowRightOutlined style={{ fontSize: "10px" }} />
                 </span>
@@ -98,7 +92,7 @@ const Users = () => {
     },
   ];
   return (
-    <Row>
+    <Row style={{overflow:'hidden'}}>
       <Col span={24}>
         <SearchField />
       </Col>

@@ -12,7 +12,7 @@ const PatientList = () => {
       dataIndex: "details",
       key: "details",
       render: (text) => (
-        <p style={{ marginTop: "10px", display: "flex", alignItems: "center" }}>
+        <p style={{ marginTop: "10px", display: "flex", alignItems: "center", width:'max-content' }}>
           <Image
             width="48px"
             height="48px"
@@ -37,6 +37,9 @@ const PatientList = () => {
       title: "GENDER",
       dataIndex: "gender",
       key: "gender",
+      render: (text)=>(
+        <span className="gender">{text}</span>
+      )
     },
     {
       title: "OPTION",
@@ -47,7 +50,7 @@ const PatientList = () => {
           {tags.map((tag) => {
             return (
               <Tag className="options" key={tag}>
-                {tag.toUpperCase()}
+               <span className="more">{tag.toUpperCase()}</span> 
                 <span className="arrow">
                   <ArrowRightOutlined style={{ fontSize: "10px" }} />
                 </span>
@@ -57,16 +60,6 @@ const PatientList = () => {
         </>
       ),
     },
-    // {
-    //   title: 'Action',
-    //   key: 'action',
-    //   render: (text, record) => (
-    //     <Space size="middle">
-    //       <a>Invite {record.name}</a>
-    //       <a>Delete</a>
-    //     </Space>
-    //   ),
-    // },
   ];
 
   const data = [
@@ -94,7 +87,7 @@ const PatientList = () => {
   ];
 
   return (
-    <Row>
+    <Row style={{overflow:'hidden'}}>
       <Col span={24}>
         <SearchField />
       </Col>
@@ -105,10 +98,9 @@ const PatientList = () => {
           width: "100%",
         }}
       />
-      <Col span={24}></Col>
       <Col span={24} >
         <Headers
-          icon={<UserOutlined style={{ fontSize: "2rem" }} />}
+          icon={<UserOutlined />}
           title={"Patients"}
         />
       </Col>{" "}

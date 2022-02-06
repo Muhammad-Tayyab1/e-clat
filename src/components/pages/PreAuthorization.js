@@ -15,6 +15,10 @@ const PreAuthorization = () => {
       title: "REQ ID",
       dataIndex: "reqId",
       key: "reqId",
+      render: (text) => (
+        <><span style={{display: "flex", alignItems: "center", width: 'max-content' }}>{text}</span></>
+
+      )
     },
     {
       title: "AUTH CODE",
@@ -26,7 +30,7 @@ const PreAuthorization = () => {
       dataIndex: "enrollee",
       key: "enrollee",
       render: (text) => (
-        <p style={{ marginTop: "10px", display: "flex", alignItems: "center" }}>
+        <p style={{ marginTop: "10px", display: "flex", alignItems: "center", width: 'max-content' }}>
           <Image
             width="2rem"
             style={{ borderRadius: "8px" }}
@@ -46,7 +50,7 @@ const PreAuthorization = () => {
       title: "SUBMITTED AT",
       dataIndex: "submittedAt",
       key: "submittedAt",
-      render: (date) => <p className="date">{date}</p>,
+      render: (date) => <span className="date">{date}</span>,
     },
     {
       title: "STATUS",
@@ -57,17 +61,16 @@ const PreAuthorization = () => {
           {status.map((tag) => {
             return (
               <Tag
-                className={`${
-                  tag === "Completed"
+                className={`${tag === "Completed"
                     ? "finished"
                     : tag === "Ongoing"
-                    ? "onGoing"
-                    : tag === "Denied"
-                    ? "canceled"
-                    : tag === "Pending"
-                    ? "ongoing"
-                    : ""
-                }`}
+                      ? "onGoing"
+                      : tag === "Denied"
+                        ? "canceled"
+                        : tag === "Pending"
+                          ? "ongoing"
+                          : ""
+                  }`}
                 key={tag}
               >
                 {tag}
@@ -127,7 +130,7 @@ const PreAuthorization = () => {
   ];
 
   return (
-    <Row>
+    <Row style={{ overflow: 'hidden' }}>
       <Col span={24}>
         <SearchField />
       </Col>
@@ -141,12 +144,12 @@ const PreAuthorization = () => {
       <Col span={24}></Col>
       <Col span={24}>
         <Headers
-          icon={<FileDoneOutlined style={{ fontSize: "2rem" }} />}
-          title={"Encounters"}
+          icon={<FileDoneOutlined />}
+          title={"Pre-Authorization"}
         />
       </Col>{" "}
       <Col span={24}>
-        <Table columns={columns} dataSource={data} />
+        <Table className="table" columns={columns} dataSource={data} />
       </Col>
     </Row>
   );

@@ -12,7 +12,7 @@ const Organizations = () => {
 //     "Anambra",
 //   ];
   return (
-    <Row>
+    <Row style={{overflow:'hidden'}}>
       <Col span={24} style={{ padding: "0.3rem 0.7rem" }}>
         <SearchField />
       </Col>
@@ -24,7 +24,7 @@ const Organizations = () => {
         }}
       />
       <Col span={24}>
-        <BellOutlined style={{ fontSize: "2rem", color: "#0078D4" }} />
+        <BellOutlined className='iconStyle' />
         <span className="title">Organizations</span>
         <p style={{ margin: "0 0.3rem" }}>
           Enter a location or{" "}
@@ -40,16 +40,16 @@ const Organizations = () => {
           <TabPane tab="Laboratories" key="Laboratories"></TabPane>
           <TabPane tab="Departments" key="Departments"></TabPane>
         </Tabs>
-        <div style={{ padding: "0rem 0.9rem" }}>
+        <div className="location-field">
           <span>Enter Location</span>{" "}
-          <Input
+         <span> <Input
             className="searchField"
-            placeholder="Search"
+            placeholder="e.g State, Town or Name"
             prefix={<SearchIcon className="site-form-item-icon" />}
           />{" "}
           <Button type="primary" className="searchbutton">
             Search
-          </Button>
+          </Button></span>
         </div>
       </Col>
       <Col>

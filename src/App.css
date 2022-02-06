@@ -5,13 +5,15 @@
   cursor: pointer;
   transition: color 0.3s;
 }
-
+body {
+  background: #f5f5f5 !important;
+}
 /* .trigger:hover {
   color: #1890ff;
 } */
 
 .site-layout .site-layout-background {
-  background: #dfdbdb !important;
+  background: #f5f5f5 !important;
   padding: 1rem;
 }
 .sidebar {
@@ -19,6 +21,17 @@
   box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.05);
   width: 270px;
   height: fit-content;
+}
+.ant-side-Layout {
+  position: fixed;
+  background-color: #ffffff;
+}
+.sidelayout {
+  position: relative;
+  background-color: #ffffff;
+}
+.active-profile {
+  display: none !important;
 }
 .header {
   display: flex;
@@ -81,21 +94,16 @@
   flex-direction: row;
   align-items: center;
   padding: 8px;
-
   position: static;
   width: 35px;
   height: 35px;
   left: 0px;
   top: 0px;
   cursor: pointer;
-
   background: #ffffff;
   border: 1px solid #d5d5d5;
   box-sizing: border-box;
   border-radius: 15px;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -155,6 +163,10 @@
 .ant-layout-header {
   line-height: 0;
 }
+.iconStyle {
+  font-size: 2rem;
+  color: #0078d4;
+}
 .headerContent {
   display: flex;
   justify-content: space-between;
@@ -163,7 +175,10 @@
 .ant-table-thead {
   background-color: #c5c5c5 !important;
 }
-
+.ant-layout-content {
+  /* flex: auto; */
+  min-height: auto;
+}
 .options {
   display: flex;
   flex-direction: row;
@@ -174,6 +189,21 @@
   background: #f5f5f5;
   border-radius: 15px;
   cursor: pointer;
+}
+.options:hover {
+  background-color: rgb(228, 228, 228);
+}
+.more {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  text-transform: uppercase;
+
+  color: #353535;
 }
 .ant-table-tbody > tr > td {
   padding: 0px 16px;
@@ -208,7 +238,7 @@
   font-size: 11px;
 }
 .ant-table-thead > tr > th {
-  background: #dfdbdb;
+  background: #f5f5f5;
   color: #959595;
 }
 .finished {
@@ -318,6 +348,22 @@
   margin: 0px 15px;
   color: #555555;
 }
+.patientName {
+  font-family: Epilogue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+
+  color: #353535;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
 .patientId {
   font-family: Epilogue;
   font-style: normal;
@@ -334,16 +380,63 @@
   flex-grow: 0;
   margin: 8px 14px;
 }
+.patientid {
+  font-family: Epilogue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+
+  color: #757575;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+.description {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #353535;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 4px 0px;
+}
 .provider {
   font-family: Epilogue;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 16px;
-
   color: #555555;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
 }
-
+.phone {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  color: #353535;
+}
 .onGoing {
   display: flex;
   flex-direction: row;
@@ -426,7 +519,17 @@
   border: 4px solid #d5d5d5;
   transform: rotate(90deg);
 }
-
+.gender {
+  font-family: Epilogue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #353535;
+}
 .resolvedClaim {
   width: 60px;
   height: 0px;
@@ -480,4 +583,120 @@
 .searchbutton {
   background: #0078d4;
   border-radius: 10px;
+}
+.profile-div {
+  display: flex;
+  padding: 0.1rem 0.4rem;
+}
+.userProfile {
+  font-size: 1.3rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #f5f5f5;
+  color: #555555;
+}
+.user-name {
+  font-family: Epilogue;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  color: #353535;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 4px 0px;
+}
+.user-title {
+  font-family: Epilogue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  color: #555555;
+  opacity: 0.5;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 4px 0px;
+}
+.ant-table-tbody {
+  background-color: #ffffff;
+}
+.ant-table-pagination-right {
+  justify-content: flex-start;
+}
+.location-field {
+  padding: 0rem 0.9rem;
+}
+.email {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: #353535;
+}
+.menu-item-content {
+  font-family: Epilogue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #555555;
+}
+@media screen and (max-width: 480px) {
+  .iconStyle {
+    font-size: 1.2rem;
+  }
+  .title {
+    font-size: 1.2rem;
+  }
+  .rotate {
+    width: 1.7rem;
+    height: 1.7rem;
+    justify-content: center;
+    padding: 5px;
+  }
+  .printField {
+    width: 1.7rem;
+    height: 1.7rem;
+    justify-content: center;
+    padding: 5px;
+  }
+  .filterField {
+    width: 70px;
+    height: 1.7rem;
+    padding: 8px 11px;
+  }
+  .ant-tabs-tab {
+    font-size: 10px;
+  }
+  .location-field {
+    padding: 0;
+  }
+  .userProfile {
+    display: none !important;
+  }
+  .totalIndemity {
+    margin: 0;
+    font-size: 17px;
+    line-height: 2;
+  }
+  .indemityText {
+    margin: 0;
+    font-size: 12px;
+  }
+  .claimsHeader {
+    height: 75px;
+  }
 }
