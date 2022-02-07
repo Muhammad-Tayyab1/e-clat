@@ -1106,6 +1106,18 @@ order: 1;
 flex-grow: 0;
 margin: 0px 15px;
 }
+.organizations-font{
+  font-family: Rubik;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+text-decoration-line: underline;
+
+color: #555555;
+}
 @media screen and (max-width: 480px) {
   .iconStyle {
     font-size: 1.2rem;

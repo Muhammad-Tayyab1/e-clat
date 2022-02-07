@@ -60,7 +60,7 @@ const Organizations = () => {
         <div>Browse Organizations by State</div>
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent:'space-between' }}>
           {states.map((d) => (
-            <Link to='' style={{flex: '1 0 21%', width: 'calc(100% * (1/4) - 10px - 1px)', color:'black', textDecoration:'underline'}}>{d.title}</Link>
+            <Link to='' style={{flex: '1 0 21%', width: 'calc(100% * (1/4) - 10px - 1px)',}} className="organizations-font">{d.title}</Link>
           ))}{" "}
         </div>
       </Col>
