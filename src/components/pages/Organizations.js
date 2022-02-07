@@ -32,7 +32,7 @@ const Organizations = () => {
         <span className="title">Organizations</span>
         <p style={{ margin: "0 0.3rem" }}>
           Enter a location or{" "}
-          <a href="https://www.google.com/maps">browse all locations</a> to
+          <Link to="/search-result">browse all locations</Link> to
           continue. Find Hospitals, Labs or departments by selecting a tab
           below.
         </p>
