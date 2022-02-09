@@ -24,6 +24,7 @@ const PatientList = () => {
             alignItems: "center",
             width: "max-content",
           }}
+          onClick={() => onClick()}
         >
           <Image
             width="48px"
@@ -31,7 +32,7 @@ const PatientList = () => {
             style={{ borderRadius: "15px" }}
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNQb4jJzXX5S9IgIQW_hUtTfl4e_CFiu9toQ&usqp=CAU"
           />
-          <span>
+          <span onClick={() => onClick()}>
             <span className="name"> {text}</span>
             <br />
             <span className="patientId">Patient ID Here</span>
@@ -44,12 +45,17 @@ const PatientList = () => {
       title: "AGE",
       dataIndex: "age",
       key: "age",
+      render: (text) => <span onClick={() => onClick()}>{text}</span>,
     },
     {
       title: "GENDER",
       dataIndex: "gender",
       key: "gender",
-      render: (text) => <span className="gender">{text}</span>,
+      render: (text) => (
+        <span className="gender" onClick={() => onClick()}>
+          {text}
+        </span>
+      ),
     },
     {
       title: "OPTION",
@@ -114,7 +120,11 @@ const PatientList = () => {
       <Col span={24} className="table">
         <Table columns={columns} dataSource={data} />
       </Col>
-      {model && <PatientDetailsModel close={()=> setModel(false)}  />}
+      <PatientDetailsModel
+        close={() => setModel(false)}
+        model={() => setModel(true)}
+        visible={model}
+      />
     </Row>
   );
 };
