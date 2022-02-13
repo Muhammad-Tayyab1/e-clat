@@ -1,20 +1,36 @@
-import { ArrowRightOutlined, TeamOutlined } from "@ant-design/icons";
-import { Col, Row, Table, Tag } from "antd";
+import { MoreOutlined, TeamOutlined } from "@ant-design/icons";
+import { Col, Dropdown, Menu, Row, Table, Tag } from "antd";
 import React from "react";
 import Headers from "../common/Headers";
 import SearchField from "../common/SearchField";
 
 const Users = () => {
+  const menu = (
+    <Menu>
+      <Menu.Item>
+        <span className="ongoing">Active</span>
+      </Menu.Item>
+      <Menu.Item>
+        <span className="canceled">Delete</span>
+      </Menu.Item>
+    </Menu>
+  );
   const columns = [
     {
       title: "Description",
       dataIndex: "description",
       key: "description",
       render: (description) => (
-        <div style={{ display: "flex", alignItems: "center",  width:'max-content' }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            width: "max-content",
+          }}
+        >
           <span className="userIcon">E</span>
-          <span style={{margin: '0px 9px'}}>
-            <span style={{fontWeight:'bold'}}> {description}</span>
+          <span style={{ margin: "0px 9px" }}>
+            <span style={{ fontWeight: "bold" }}> {description}</span>
             <br />
             <span className="patientId" style={{ margin: "0" }}>
               Admin
@@ -28,7 +44,14 @@ const Users = () => {
       dataIndex: "Phone",
       key: "Phone",
       render: (text) => (
-        <p style={{ marginTop: "10px", display: "flex", alignItems: "center", width:'max-content' }}>
+        <p
+          style={{
+            marginTop: "10px",
+            display: "flex",
+            alignItems: "center",
+            width: "max-content",
+          }}
+        >
           <span className="phone"> {text}</span>
         </p>
       ),
@@ -48,9 +71,17 @@ const Users = () => {
           {tags.map((tag) => {
             return (
               <Tag className="options" key={tag}>
-               <span className="more">{tag.toUpperCase()}</span> 
-                <span className="arrow">
-                  <ArrowRightOutlined style={{ fontSize: "10px" }} />
+                <span>{tag.toUpperCase()}</span>
+                <span>
+                  <Dropdown overlay={menu}>
+                    <span
+                      style={{ color: "#959595" }}
+                      className="ant-dropdown-link"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      <MoreOutlined style={{ fontSize: "14px" }} />
+                    </span>
+                  </Dropdown>
                 </span>
               </Tag>
             );
@@ -66,7 +97,7 @@ const Users = () => {
       description: "Emmanuel Dennis",
       Phone: `09090527304`,
       email: "emekaemmanuel045@gmail.com",
-      action: ["More"],
+      action: ["Options"],
     },
     {
       key: "2",
@@ -74,25 +105,25 @@ const Users = () => {
       Phone: `09090527304`,
       email: "emekaemmanuel045@gmail.com",
       status: ["Denied"],
-      action: ["More"],
+      action: ["Options"],
     },
     {
       key: "3",
       description: "Emmanuel Dennis",
       Phone: `09090527304`,
       email: "emekaemmanuel045@gmail.com",
-      action: ["More"],
+      action: ["Options"],
     },
     {
       key: "4",
       description: "Emmanuel Dennis",
       Phone: `09090527304`,
       email: "emekaemmanuel045@gmail.com",
-      action: ["More"],
+      action: ["Options"],
     },
   ];
   return (
-    <Row style={{overflow:'hidden'}}>
+    <Row style={{ overflow: "hidden" }}>
       <Col span={24}>
         <SearchField />
       </Col>

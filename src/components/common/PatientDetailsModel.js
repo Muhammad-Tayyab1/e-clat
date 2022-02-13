@@ -34,9 +34,9 @@ const PatientDetailsModel = ({ close, model, visible }) => {
             <div className="patient-div">
               <Image
                 className="patient-image"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNQb4jJzXX5S9IgIQW_hUtTfl4e_CFiu9toQ&usqp=CAU"
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
               />
-              &nbsp;
+              &nbsp; &nbsp;
               <div className="patient-name-div">
                 <span className="patient-name">Eugene Ward</span>
                 <span className="patient-id">Patient ID Here</span>
@@ -47,27 +47,29 @@ const PatientDetailsModel = ({ close, model, visible }) => {
                 <span>
                   <Genderlogo />
                 </span>
-                &nbsp;
+                &nbsp; &nbsp;
                 <span className="gender-content">
                   <span className="gender-heading">Gender</span>
                   <span className="gender-text">Male</span>
                 </span>
               </div>
+              &nbsp; &nbsp;
               <div className="gender-div">
                 <span>
                   <Calendar />
                 </span>
-                &nbsp;
+                &nbsp; &nbsp;
                 <span className="gender-content">
                   <span className="gender-heading">DOB</span>
                   <span className="gender-text">1987-05-12 (35yr)</span>
                 </span>
               </div>
+              &nbsp;
               <div className="gender-div">
                 <span>
                   <Location />
                 </span>
-                &nbsp;
+                &nbsp; &nbsp;
                 <span className="gender-content">
                   <span className="gender-heading">Address</span>
                   <span className="gender-text">
@@ -75,6 +77,7 @@ const PatientDetailsModel = ({ close, model, visible }) => {
                   </span>
                 </span>
               </div>
+              &nbsp;
             </div>
 
             <div>

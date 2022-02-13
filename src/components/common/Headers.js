@@ -11,8 +11,10 @@ const Headers = ({ icon, title, text, result }) => {
         <div style={{ display: "flex", alignItems: "center" }}>
           <span className="iconStyle">{icon}</span> &nbsp;
           <div className="title">{title}</div>
-          <div className="text">{text}<span className="result">{result}</span></div>
-          
+          <div className="text">
+            {text}
+            <span className="result">{result}</span>
+          </div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div className="rotate">

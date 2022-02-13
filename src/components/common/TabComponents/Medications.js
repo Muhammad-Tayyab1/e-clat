@@ -24,7 +24,7 @@ const Medications = () => {
               <ArrowRightOutlined style={{ color: "#959595" }} /> &nbsp; &nbsp;
             </div>
           </div>
-          <div className="medications-tab" style={{marginTop:'0.5rem'}}>
+          <div className="medications-tab" style={{ marginTop: "0.5rem" }}>
             <div style={{ display: "flex", alignItems: "center" }}>
               <span className="medicine-box">
                 <TabletIcon />

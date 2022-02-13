@@ -29,14 +29,16 @@ const PatientList = () => {
           <Image
             width="48px"
             height="48px"
-            style={{ borderRadius: "15px" }}
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNQb4jJzXX5S9IgIQW_hUtTfl4e_CFiu9toQ&usqp=CAU"
+            style={{ borderRadius: "10px" }}
+            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
           />
+          &nbsp;
           <span onClick={() => onClick()}>
             <span className="name"> {text}</span>
             <br />
             <span className="patientId">Patient ID Here</span>
           </span>
+          &nbsp;
           {deceased ? <span className="deceased">Deceased</span> : ""}
         </p>
       ),

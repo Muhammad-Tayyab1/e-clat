@@ -16,9 +16,18 @@ const PreAuthorization = () => {
       dataIndex: "reqId",
       key: "reqId",
       render: (text) => (
-        <><span style={{display: "flex", alignItems: "center", width: 'max-content' }}>{text}</span></>
-
-      )
+        <>
+          <span
+            style={{
+              display: "flex",
+              alignItems: "center",
+              width: "max-content",
+            }}
+          >
+            {text}
+          </span>
+        </>
+      ),
     },
     {
       title: "AUTH CODE",
@@ -30,12 +39,20 @@ const PreAuthorization = () => {
       dataIndex: "enrollee",
       key: "enrollee",
       render: (text) => (
-        <p style={{ marginTop: "10px", display: "flex", alignItems: "center", width: 'max-content' }}>
+        <p
+          style={{
+            marginTop: "10px",
+            display: "flex",
+            alignItems: "center",
+            width: "max-content",
+          }}
+        >
           <Image
             width="2rem"
             style={{ borderRadius: "8px" }}
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNQb4jJzXX5S9IgIQW_hUtTfl4e_CFiu9toQ&usqp=CAU"
+            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
           />
+          &nbsp;
           <span className="name"> {text}</span>
         </p>
       ),
@@ -61,16 +78,17 @@ const PreAuthorization = () => {
           {status.map((tag) => {
             return (
               <Tag
-                className={`${tag === "Completed"
+                className={`${
+                  tag === "Completed"
                     ? "finished"
                     : tag === "Ongoing"
-                      ? "onGoing"
-                      : tag === "Denied"
-                        ? "canceled"
-                        : tag === "Pending"
-                          ? "ongoing"
-                          : ""
-                  }`}
+                    ? "onGoing"
+                    : tag === "Denied"
+                    ? "canceled"
+                    : tag === "Pending"
+                    ? "ongoing"
+                    : ""
+                }`}
                 key={tag}
               >
                 {tag}
@@ -130,7 +148,7 @@ const PreAuthorization = () => {
   ];
 
   return (
-    <Row style={{ overflow: 'hidden' }}>
+    <Row style={{ overflow: "hidden" }}>
       <Col span={24}>
         <SearchField />
       </Col>
@@ -143,10 +161,7 @@ const PreAuthorization = () => {
       />
       <Col span={24}></Col>
       <Col span={24}>
-        <Headers
-          icon={<FileDoneOutlined />}
-          title={"Pre-Authorization"}
-        />
+        <Headers icon={<FileDoneOutlined />} title={"Pre-Authorization"} />
       </Col>{" "}
       <Col span={24}>
         <Table className="table" columns={columns} dataSource={data} />

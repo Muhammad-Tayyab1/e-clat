@@ -52,7 +52,7 @@ const Sidebar = () => {
         trigger={null}
         collapsible
         collapsed={collapsed}
-        onCollapse={()=>toggle()}
+        onCollapse={() => toggle()}
       >
         <div
           className={` ${

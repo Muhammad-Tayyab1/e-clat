@@ -7,17 +7,46 @@ import SearchField from "../common/SearchField";
 const { TabPane } = Tabs;
 const Organizations = () => {
   const states = [
-    { title: "Abia" }, { title: "Adamawa" }, { title: "Akwa Ibom" }, { title: "Anambra" }, { title: 'Bauchi' },
-    { title: 'Bayelsa' }, { title: ' Benue' }, { title: 'Ekiti' }, { title: 'Cross River' }, { title: 'Delta' },
-    { title: 'Ebonyi' }, { title: 'Edo' }, { title: 'Ekiti' }, { title: 'Gombe' }, { title: 'Imo' }, { title: 'Jigawa' },
-    { title: 'Kaduna' }, { title: 'Kano' }, { title: 'Katsina' }, { title: 'Kebbi' },
-    { title: 'Kogi' }, { title: 'Kwara' }, { title: 'Lagos' }, { title: 'Nasarawa' }, { title: 'Niger' },
-    { title: 'Ogun' }, { title: 'Ondo' }, { title: 'Osun' }, { title: 'Oyo' }, { title: 'Plateau' }, { title: 'Rivers' },
-    { title: 'Sokoto' }, { title: 'Taraba' }, { title: 'Yobe' }, { title: 'Zamfara' }, { title: 'FCT' }
+    { title: "Abia" },
+    { title: "Adamawa" },
+    { title: "Akwa Ibom" },
+    { title: "Anambra" },
+    { title: "Bauchi" },
+    { title: "Bayelsa" },
+    { title: " Benue" },
+    { title: "Ekiti" },
+    { title: "Cross River" },
+    { title: "Delta" },
+    { title: "Ebonyi" },
+    { title: "Edo" },
+    { title: "Ekiti" },
+    { title: "Gombe" },
+    { title: "Imo" },
+    { title: "Jigawa" },
+    { title: "Kaduna" },
+    { title: "Kano" },
+    { title: "Katsina" },
+    { title: "Kebbi" },
+    { title: "Kogi" },
+    { title: "Kwara" },
+    { title: "Lagos" },
+    { title: "Nasarawa" },
+    { title: "Niger" },
+    { title: "Ogun" },
+    { title: "Ondo" },
+    { title: "Osun" },
+    { title: "Oyo" },
+    { title: "Plateau" },
+    { title: "Rivers" },
+    { title: "Sokoto" },
+    { title: "Taraba" },
+    { title: "Yobe" },
+    { title: "Zamfara" },
+    { title: "FCT" },
   ];
   return (
-    <Row style={{ overflow: 'hidden' }}>
-      <Col span={24} style={{ padding: "0.3rem 0.7rem" }}>
+    <Row style={{ overflow: "hidden" }}>
+      <Col span={24}>
         <SearchField />
       </Col>
       <hr
@@ -28,13 +57,12 @@ const Organizations = () => {
         }}
       />
       <Col span={24}>
-        <BellOutlined className='iconStyle' />
+        <BellOutlined className="iconStyle" />
         <span className="title">Organizations</span>
         <p style={{ margin: "0 0.3rem" }}>
           Enter a location or{" "}
-          <Link to="/search-result">browse all locations</Link> to
-          continue. Find Hospitals, Labs or departments by selecting a tab
-          below.
+          <Link to="/search-result">browse all locations</Link> to continue.
+          Find Hospitals, Labs or departments by selecting a tab below.
         </p>
         <div></div>
       </Col>
@@ -46,21 +74,40 @@ const Organizations = () => {
         </Tabs>
         <div className="location-field">
           <span>Enter Location</span>{" "}
-          <span> <Input
-            className="searchField"
-            placeholder="e.g State, Town or Name"
-            prefix={<SearchIcon className="site-form-item-icon" />}
-          />{" "}
+          <span>
+            {" "}
+            <Input
+              className="searchField"
+              placeholder="e.g State, Town or Name"
+              prefix={<SearchIcon className="site-form-item-icon" />}
+            />{" "}
             <Button type="primary" className="searchbutton">
               Search
-            </Button></span>
+            </Button>
+          </span>
         </div>
       </Col>
       <Col>
         <div>Browse Organizations by State</div>
-        <div style={{ display: "flex", flexWrap: "wrap", justifyContent:'space-between' }}>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+          }}
+        >
           {states.map((d) => (
-            <Link to='' style={{flex: '1 0 21%', width: 'calc(100% * (1/4) - 10px - 1px)',}} className="organizations-font">{d.title}</Link>
+            <Link
+              to=""
+              style={{
+                flex: "1 0 21%",
+                width: "calc(100% * (1/4) - 10px - 1px)",
+                margin: "5px",
+              }}
+              className="organizations-font"
+            >
+              {d.title}
+            </Link>
           ))}{" "}
         </div>
       </Col>

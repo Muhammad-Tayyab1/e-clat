@@ -12,20 +12,20 @@ const SearchResultPage = () => {
   return (
     <div>
       <Row>
-      <Col span={24}>
-        <SearchField />
-      </Col>
-      <hr
-        style={{
-          border: "1px solid #E5E5E5",
-          height: "0",
-          width: "100%",
-        }}
-      />
-      <Col span={24}>
-        <Headers text={"Results for"} result={'“Lagos”'} />
-      </Col>{" "}
-        <Col span={24} style={{display: 'flex', flexWrap:'wrap'}}>
+        <Col span={24}>
+          <SearchField />
+        </Col>
+        <hr
+          style={{
+            border: "1px solid #E5E5E5",
+            height: "0",
+            width: "100%",
+          }}
+        />
+        <Col span={24}>
+          <Headers text={"Results for"} result={"“Lagos”"} />
+        </Col>{" "}
+        <Col span={24} style={{ display: "flex", flexWrap: "wrap" }}>
           <div className="card">
             <div style={{ display: "flex", padding: "0.5rem" }}>
               <span className="hospital-logo">

@@ -80,13 +80,19 @@ const EncountersTab = () => {
               <ArrowRightOutlined style={{ color: "#959595" }} /> &nbsp; &nbsp;
             </span>
           </div>
-          <div style={{display:'flex', alignItems:'center', justifyContent:'center', marginTop:'0.5rem'}}>
-             <div className="more-button">
-            <span className="show-more">Show More</span>
-            <DownOutlined style={{color:' #555555'}} />
-          </div>  
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginTop: "0.5rem",
+            }}
+          >
+            <div className="more-button">
+              <span className="show-more">Show More</span>
+              <DownOutlined style={{ color: " #555555" }} />
+            </div>
           </div>
-         
         </Col>
       </Row>
     </div>

@@ -7,6 +7,7 @@
 }
 body {
   background: #f5f5f5 !important;
+  font-family: 'Rubik', sans-serif;
 }
 /* .trigger:hover {
   color: #1890ff;
@@ -187,10 +188,11 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 26px;
-  background: #f5f5f5;
-  border-radius: 15px;
+  padding: 10px 18px;
+  width: 90px;
+  height: 29px;
+  background: #F5F5F5;
+  border-radius: 20px;
   cursor: pointer;
 }
 .options:hover {
@@ -312,6 +314,9 @@ body {
   line-height: 17px;
   /* identical to box height */
   color: #959595;
+  display: flex;
+  align-items: center;
+  width: max-content;
 }
 .border {
   border: 1px solid #d5d5d5;
@@ -342,7 +347,7 @@ body {
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin: 0px 15px;
+  margin: 0px 0px;
   color: #555555;
 }
 .patientName {
@@ -365,15 +370,11 @@ body {
   font-weight: normal;
   font-size: 14px;
   line-height: 14px;
-
   color: #757575;
-
   /* Inside auto layout */
-
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin: 8px 14px;
 }
 .patientid {
   font-style: normal;
@@ -990,8 +991,8 @@ body {
   overscroll-behavior-y: contain;
   z-index: 102;
 }
-.ant-drawer-content-wrapper{
-width: fit-content !important;
+.ant-drawer-content-wrapper {
+  width: fit-content !important;
 }
 .card {
   width: 239px;
@@ -1011,72 +1012,72 @@ width: fit-content !important;
   justify-content: center;
   width: max-content;
 }
-.uni-name{
-font-style: normal;
-font-weight: bold;
-font-size: 16px;
-line-height: 19px;
-/* identical to box height */
-color: #353535;
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 2px 0px;
+.uni-name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #353535;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 2px 0px;
 }
-.hospital-address{
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 145%;
-/* or 20px */
-color: #555555;
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-padding: 0.5rem;
-display: flex;
-align-items: center;
+.hospital-address {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 145%;
+  /* or 20px */
+  color: #555555;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
 }
-.text{
-font-style: normal;
-font-weight: bold;
-font-size: 32px;
-line-height: 38px;
-/* identical to box height */
-color: #353535;
-/* Inside auto layout */
+.text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 38px;
+  /* identical to box height */
+  color: #353535;
+  /* Inside auto layout */
 
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 0px 15px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 15px;
 }
-.result{
-font-style: normal;
-font-weight: normal;
-font-size: 32px;
-line-height: 38px;
-/* identical to box height */
-color: #353535;
-/* Inside auto layout */
+.result {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 38px;
+  /* identical to box height */
+  color: #353535;
+  /* Inside auto layout */
 
-flex: none;
-order: 1;
-flex-grow: 0;
-margin: 0px 15px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 15px;
 }
-.organizations-font{
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 19px;
-/* identical to box height */
+.organizations-font {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
 
-text-decoration-line: underline;
+  text-decoration-line: underline;
 
-color: #555555;
+  color: #555555;
 }
 @media screen and (max-width: 480px) {
   .iconStyle {
@@ -1085,11 +1086,11 @@ color: #555555;
   .title {
     font-size: 1.2rem;
   }
-  .text{
+  .text {
     font-size: 1rem;
     margin-left: 0;
   }
-  .result{
+  .result {
     font-size: 0.8rem;
     margin-left: 0;
   }
@@ -1153,7 +1154,7 @@ color: #555555;
   }
   .collapsed {
   }
-  .ant-drawer-content-wrapper{
+  .ant-drawer-content-wrapper {
     width: 100% !important;
   }
 }

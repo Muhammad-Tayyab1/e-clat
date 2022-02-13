@@ -10,11 +10,15 @@ const Claims = () => {
       title: "DATE",
       dataIndex: "date",
       key: "date",
-      render :(date)=>(
+      render: (date) => (
         <>
-        <span style={{display: "flex", alignItems: "center",width:'max-content'}}>{date}</span>
+          <span
+            className="date"
+          >
+            {date}
+          </span>
         </>
-      )
+      ),
     },
     {
       title: "Description",
@@ -24,7 +28,9 @@ const Claims = () => {
         <>
           <span className="description"> {description}</span>
           <br />
-          <span className="patientId" style={{margin:'0'}}>Routine checkup</span>
+          <span className="patientId" style={{ margin: "0" }}>
+            Routine checkup
+          </span>
         </>
       ),
     },
@@ -33,14 +39,22 @@ const Claims = () => {
       dataIndex: "claimant",
       key: "claimant",
       render: (text) => (
-        <p style={{ marginTop: "10px", display: "flex", alignItems: "center", width:'max-content' }}>
+        <p
+          style={{
+            marginTop: "10px",
+            display: "flex",
+            alignItems: "center",
+            width: "max-content",
+          }}
+        >
           <Image
             width="48px"
             height="48px"
-            style={{ borderRadius: "15px" }}
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNQb4jJzXX5S9IgIQW_hUtTfl4e_CFiu9toQ&usqp=CAU"
+            style={{ borderRadius: "10px" }}
+            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
           />
-            <span className="name"> {text}</span>
+          &nbsp;
+          <span className="name"> {text}</span>
         </p>
       ),
     },
@@ -86,7 +100,7 @@ const Claims = () => {
           {tags.map((tag) => {
             return (
               <Tag className="options" key={tag}>
-                <span className="more">{tag.toUpperCase()}</span> 
+                <span className="more">{tag.toUpperCase()}</span>
                 <span className="arrow">
                   <ArrowRightOutlined style={{ fontSize: "10px" }} />
                 </span>
@@ -138,8 +152,8 @@ const Claims = () => {
   ];
 
   return (
-    <Row style={{overflow:'hidden'}}>
-      <Col span={24} style={{ padding: "0.3rem 0.7rem" }}>
+    <Row style={{ overflow: "hidden" }}>
+      <Col span={24}>
         <SearchField />
       </Col>
       <hr
@@ -172,16 +186,9 @@ const Claims = () => {
         </div>
       </Col>
       <Col span={24} style={{ padding: "0.3rem 0.7rem", marginTop: "1rem" }}>
-        <Headers
-          icon={<FolderOpenOutlined/>}
-          title={"Claims"}
-        />
+        <Headers icon={<FolderOpenOutlined />} title={"Claims"} />
       </Col>
-      <Col
-        span={24}
-        className="table"
-        style={{ padding: "0rem 0.7rem"}}
-      >
+      <Col span={24} className="table" style={{ padding: "0rem 0.7rem" }}>
         <Table columns={columns} dataSource={data} />
       </Col>
     </Row>

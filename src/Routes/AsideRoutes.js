@@ -22,8 +22,8 @@ export const AsideRoutes = () => {
         <Route path="/claims" element={<Claims />} />
         <Route path="/organizations" element={<Organizations />} />
         <Route path="/users" element={<Users />} />
-        <Route path='/patient-details' element={<PatientDetailsModel />} />
-        <Route path='/search-result' element={<SearchResultPage/>} />
+        <Route path="/patient-details" element={<PatientDetailsModel />} />
+        <Route path="/search-result" element={<SearchResultPage />} />
       </Routes>
     </div>
   );

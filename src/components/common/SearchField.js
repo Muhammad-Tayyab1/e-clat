@@ -19,8 +19,14 @@ const SearchField = () => {
           />
         </div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-         <div> <PlusOutlined className="addIcon" /></div> &nbsp;
-         <span className="notification"><Notification  /></span> 
+          <div>
+            {" "}
+            <PlusOutlined className="addIcon" />
+          </div>{" "}
+          &nbsp;
+          <span className="notification">
+            <Notification />
+          </span>
         </div>
       </Col>
     </Row>
